@@ -66,10 +66,44 @@ section {
     color: #333;
 }
 
-/* Navbar */
+/* Navbar Styling */
 .navbar {
-    z-index: 100;
+    background-color: #343a40; /* Dark background for elegance */
+    padding: 1.2rem 1rem; /* Increased padding for thickness */
+    font-size: 1.1rem; /* Slightly larger font for sophistication */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
+.navbar-brand {
+    font-size: 1.5rem; /* Larger brand name for emphasis */
+    color: #f8f9fa; /* Light text for visibility */
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: #e9ecef; /* Light gray on hover */
+}
+
+.nav-link {
+    color: #e9ecef; /* Light gray links */
+    margin-right: 1rem;
+}
+
+.nav-link:hover {
+    color: #ffffff; /* Pure white on hover */
+    text-decoration: underline; /* Subtle underline for elegance */
+}
+
+.navbar-toggler {
+    border: none;
+    color: #f8f9fa;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: 0 0 5px #f8f9fa; /* Glow effect when focused */
+}
+
 
 /* Card Styling */
 .card {
@@ -97,8 +131,75 @@ h2 {
     color: #333;
 }
 
-/* Footer */
-footer p {
-    margin: 0;
+/* Booking Section */
+#booking {
+    background-color: #f8f9fa;
+    height:100vh;
+    margin-top: 5vh;
+    padding: 4rem 0;
 }
 
+#bookingForm {
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#bookingForm input,
+#bookingForm select {
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#bookingForm button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* Footer Styling */
+footer {
+    background: #343a40; /* Dark background */
+    color: #f8f9fa; /* Bright text */
+    padding: 3rem 1.5rem; /* Increased padding for thickness */
+    font-size: 1.1rem; /* Slightly larger text for an elegant feel */
+    border-top: 5px solid #495057; /* Thick border for emphasis */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+footer h5 {
+    color: #ffffff; /* White headers for prominence */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+footer p, footer ul, footer a {
+    color: #e9ecef; /* Light gray text for readability */
+}
+
+footer a:hover {
+    color: #ffffff; /* White on hover */
+    text-decoration: underline; /* Underline for elegance */
+}
+
+footer i {
+    font-size: 1.25rem;
+    color: #e9ecef;
+}
+
+footer hr {
+    border-color: #6c757d; /* Slightly lighter border */
+}
+
+footer .social-icons a {
+    margin-right: 1rem;
+    font-size: 1.5rem; /* Larger icons for emphasis */
+    color: #e9ecef;
+}
+
+footer .social-icons a:hover {
+    color: #ffffff; /* White on hover */
+}
