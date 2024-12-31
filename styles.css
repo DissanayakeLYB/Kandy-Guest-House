@@ -1,45 +1,23 @@
-body {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    margin: 0;
-}
-
+/* Ensure each section takes full height */
 section {
-    scroll-snap-align: start;
-    min-height: 100vh; /* Ensure each section takes full screen height */
+    height: 100vh; /* Full viewport height */
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    transition: opacity 400ms ease-in-out;
+    position: relative;
+    z-index: 1;
 }
 
-#hero {
-    background: url('placeholder-hero.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
-}
 
-#rooms {
-    background-color: #f8f9fa;
-}
-
-#features {
-    background-color: #e9ecef;
-    height: 300vh;
-}
-
-.features-sections{
-    min-height: 100vh;
-}
-
-#modern-design {
-    background-color: #f1f1f1;
-}
+/* Hero Section */
 .hero-section {
-    background: url('placeholder-hero.jpg') no-repeat center center/cover;
+    background: url('Images/hero-background.jpg') no-repeat center center/cover;
+    color: white;
     height: 100vh;
     position: relative;
 }
+
 .hero-section::after {
     content: '';
     position: absolute;
@@ -49,21 +27,35 @@ section {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
 }
+
 .hero-section .container {
     position: relative;
     z-index: 1;
 }
-.room-card{
-    transition-duration: 0.3s;
+
+/* Sections Background */
+#features, #rooms {
+    background-color: #f8f9fa;
 }
-.room-card:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
+
+/* Carousel Styling */
+.carousel-inner img {
+    object-fit: cover;
+    height: 500px;
 }
 
 #features .carousel img {
     border-radius: 8px;
+    max-height: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#features {
+    height: 200vh;
+}
+
+.features-section {
+    min-height: 65vh;
 }
 
 #features .list-group-item {
@@ -74,57 +66,39 @@ section {
     color: #333;
 }
 
-.carousel-inner img {
-    max-height: 300px; /* Set the maximum height */
-    width: 100%;       /* Ensure the width adjusts proportionally */
-    object-fit: cover; /* Ensures the image scales nicely within the container */
-}
-
-/* Ensure each section takes full height */
-section {
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    position: relative;
-    z-index: 1;
-}
-
-section.active {
-    opacity: 1;
-    z-index: 10;
-}
-
-/* Styling for smoother scroll */
-html, body {
-    scroll-behavior: smooth;
-}
-
-/* Optional: Customize hero and sections for better UI */
-.hero-section {
-    background: url('Images/hero-background.jpg') no-repeat center center/cover;
-    color: white;
-    height: 100vh;
-}
-
-#features, #rooms {
-    background-color: #f8f9fa;
-}
-
-/* Prevent images from being stretched in carousel */
-.carousel-inner img {
-    object-fit: cover;
-    height: 500px;
-}
-
-/* Ensure the navbar remains fixed */
+/* Navbar */
 .navbar {
     z-index: 100;
 }
 
-/* Smooth scroll effect */
-html {
-    scroll-behavior: smooth;
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.room-card:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* General Typography */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Footer */
+footer p {
+    margin: 0;
+}
+
